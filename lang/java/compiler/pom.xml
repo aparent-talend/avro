@@ -15,9 +15,9 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 -->
-<project
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" 
+  xmlns="http://maven.apache.org/POM/4.0.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -37,8 +37,7 @@
   <properties>
     <main.basedir>${project.parent.parent.basedir}</main.basedir>
     <osgi.import>
-      !org.apache.avro.compiler*,
-      org.apache.avro*;version="${project.version}",
+      !org.apache.avro.compiler*, org.apache.avro*;version="${project.version}",
       org.apache.commons.lang3*,
       *
     </osgi.import>
@@ -205,6 +204,10 @@
       <artifactId>jackson-databind</artifactId>
     </dependency>
     <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+    </dependency>
+    <dependency>
       <groupId>org.apache.ant</groupId>
       <artifactId>ant</artifactId>
       <version>${ant.version}</version>
@@ -215,10 +218,6 @@
       <groupId>org.hamcrest</groupId>
       <artifactId>hamcrest</artifactId>
       <scope>test</scope>
-    </dependency>
-	<dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
     </dependency>
     <dependency>
       <groupId>junit</groupId>

@@ -15,9 +15,9 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 -->
-<project
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" 
+  xmlns="http://maven.apache.org/POM/4.0.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -36,14 +36,11 @@
   <properties>
     <main.basedir>${project.parent.parent.basedir}</main.basedir>
     <osgi.import>
-      !org.apache.avro.mapred*,
-      org.apache.avro*;version="${project.version}",
+      !org.apache.avro.mapred*, org.apache.avro*;version="${project.version}",
       org.apache.hadoop*,
       *
     </osgi.import>
-    <osgi.export>
-      org.apache.avro.mapred*;version="${project.version}",
-      org.apache.avro.hadoop*;version="${project.version}",
+    <osgi.export> org.apache.avro.mapred*;version="${project.version}", org.apache.avro.hadoop*;version="${project.version}",
     </osgi.export>
   </properties>
 
@@ -170,8 +167,8 @@
       <artifactId>hamcrest</artifactId>
     </dependency>
     <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-api</artifactId>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
@@ -191,9 +188,9 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-        <groupId>org.xerial.snappy</groupId>
-        <artifactId>snappy-java</artifactId>
-        <scope>test</scope>
+      <groupId>org.xerial.snappy</groupId>
+      <artifactId>snappy-java</artifactId>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>

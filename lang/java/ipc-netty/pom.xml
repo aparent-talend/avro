@@ -15,9 +15,9 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 -->
-<project
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" 
+  xmlns="http://maven.apache.org/POM/4.0.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -37,10 +37,8 @@
   <properties>
     <main.basedir>${project.parent.parent.basedir}</main.basedir>
     <osgi.import>
-      !org.apache.avro.ipc.netty*,
-      org.apache.avro*;version="${project.version}",
-      org.jboss.netty*,
-      org.apache.velocity*;resolution:=optional,
+      !org.apache.avro.ipc.netty*, org.apache.avro*;version="${project.version}",
+      org.jboss.netty*, org.apache.velocity*;resolution:=optional,
       *
     </osgi.import>
     <osgi.export>org.apache.avro.ipc*;version="${project.version}"</osgi.export>
@@ -79,16 +77,9 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>avro-ipc</artifactId>
-        <version>${project.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>avro-ipc</artifactId>
-        <version>${project.version}</version>
-        <type>test-jar</type>
-        <scope>test</scope>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>avro-ipc</artifactId>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>io.netty</groupId>
@@ -99,8 +90,15 @@
       <artifactId>velocity-engine-core</artifactId>
     </dependency>
     <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-api</artifactId>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>avro-ipc</artifactId>
+      <version>${project.version}</version>
+      <type>test-jar</type>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -108,6 +106,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  
+
 </project>
 
